@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $response = curl_exec($ch);
         if (curl_errno($ch)) {
             $results[] = ['error' => 'Curl error: ' . curl_error($ch)];
-            continue; // Skip to the next iteration of the loop
+            continue; // Skip to the next iteration of the loops
         }
         curl_close($ch);
         preg_match_all('/^Set-Cookie:\s*([^;]*)/mi', $response, $matches);
