@@ -126,6 +126,11 @@ $(document).ready(function () {
                         row.append($("<td colspan='5'>").text("Request in Progress..."));
                         tableBody.append(row);
                     }
+                    else if(data=="Invalid Key"){
+                        let row = $("<tr>");
+                        row.append($("<td colspan='5'>").text("Request in Progress..."));
+                        tableBody.append(row);
+                    }
                     
                     else {
                         data.forEach(function (item) {
